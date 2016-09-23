@@ -1,0 +1,28 @@
+{
+    "name": "echobool/getui-laravel5",
+    "description": "Getui expansion for Laravel5",
+    "keywords": [
+        "Laravel5",
+        "Laravel",
+        "getui"
+    ],
+    "homepage": "https://github.com/echobool/getui-laravel5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luojinyi",
+            "email": "ljy518338@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": "5.*",
+        "illuminate/config": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Echobool\\Getui\\": "src/"
+        }
+    }
+}
