@@ -74,7 +74,7 @@ class GetuiPush
     {
 
         //APN简单推送
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET);
         $template = new IGtAPNTemplate();
         $apn = new IGtAPNPayload();
         $alertmsg = new SimpleAlertMsg();
@@ -143,7 +143,7 @@ class GetuiPush
         //        $message = new IGtSingleMessage();
 
         //APN高级推送
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET);
         $template = new IGtAPNTemplate();
         $apn = new IGtAPNPayload();
         $alertmsg = new DictionaryAlertMsg();
@@ -261,7 +261,7 @@ class GetuiPush
     {
         putenv("gexin_pushSingleBatch_needAsync=false");
 
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET);
         $batch = new IGtBatch($this->APPKEY, $igt);
         $batch->setApiUrl($this->HOST);
         //$igt->connect();
@@ -305,7 +305,7 @@ class GetuiPush
         putenv("gexin_pushList_needDetails=true");
         putenv("gexin_pushList_needAsync=true");
 
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET);
         //消息模版：
         // 1.TransmissionTemplate:透传功能模板
         // 2.LinkTemplate:通知打开链接功能模板
@@ -343,7 +343,7 @@ class GetuiPush
 //群推接口案例
     function pushMessageToApp($data, $template_id=1)
     {
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET);
         $template = $this->getTemplate($data, $template_id);
         //$template = IGtLinkTemplateDemo();
         //个推信息体
