@@ -458,7 +458,7 @@ class GetuiPush
         $apn = new IGtAPNPayload();
         $alertmsg = new DictionaryAlertMsg();
         $apn->alertMsg = $alertmsg;//"alertMsg";
-        $apn->badge = 11;
+        //$apn->badge = 11;
         $apn->actionLocKey = "启动";
         //        $apn->category = "ACTIONABLE";
         //        $apn->contentAvailable = 1;
