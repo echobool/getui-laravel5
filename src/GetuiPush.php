@@ -232,7 +232,7 @@ class GetuiPush
     function pushMessageToSingle($cid, $data, $template_id = 1)
     {
         //$igt = new IGeTuiPush($this->HOST,$this->APPKEY,$this->MASTERSECRET);
-        $igt = new IGeTuiPush($this->HOST, $this->APPKEY, $this->MASTERSECRET, false);
+        $igt = new IGeTuiPush(NULL, $this->APPKEY, $this->MASTERSECRET, false);
 
         $template = $this->getTemplate($data, $template_id);
 
