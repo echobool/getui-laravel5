@@ -1,6 +1,5 @@
 # getui
-个推laravel5扩展包
-根据官方最新SDK包整理
+个推laravel5扩展包, 根据官方最新SDK包整理
 
 #安装方法
     1 在项目目录下 composer require echobool/getui-laravel5
