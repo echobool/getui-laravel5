@@ -120,7 +120,7 @@ class GetuiPush
         ////
         //    $message->set_data($template);
         $ret = $igt->pushAPNMessageToSingle($this->APPID, $DeviceToken, $message);
-       // var_dump($ret);
+        // var_dump($ret);
         return $ret;
     }
 
@@ -147,7 +147,7 @@ class GetuiPush
         $template = new IGtAPNTemplate();
         $apn = new IGtAPNPayload();
         $alertmsg = new DictionaryAlertMsg();
-        $alertmsg->body = "body";
+        $alertmsg->body = $data['body'];
         $alertmsg->actionLocKey = "查看";
         $alertmsg->locKey = $data['text'];
         $alertmsg->locArgs = array("locargs");
@@ -503,8 +503,8 @@ class GetuiPush
         $apn->title = "通知栏标题";
         $apn->titleLocArgs = array("titleLocArgs");
         $apn->titleLocKey = "通知栏标题";
-        $apn->body = "body";
-        $apn->customMsg = array("payload" => "payload");
+        $apn->body = $data['body'];
+        $apn->customMsg = array("payload" => $data['payload']);
         $apn->launchImage = "launchImage";
         $apn->locArgs = array("locArgs");
 
